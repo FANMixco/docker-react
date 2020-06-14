@@ -16,8 +16,8 @@ deploy:
     provider: elasticbeanstalk
     region: "us-east-2"
     #app name
-    app: "docker-react"
-    env: "DockerReact-env"
+    app: "docker-react-example"
+    env: "DockerReactExample-env"
     #s3-storage
     bucket_name: "elasticbeanstalk-us-east-2-195243960488"
     bucket_path: "docker-react"
@@ -26,3 +26,4 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
     #http://dockerreact-env.eba-vk7k8ges.us-east-2.elasticbeanstalk.com/
+    #DockerReactExample-env.eba-apdipmnv.us-east-2.elasticbeanstalk.com
