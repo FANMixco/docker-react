@@ -1,0 +1,13 @@
+#super user permissions
+sudo: required
+language: generic
+services:
+    - docker
+
+before_install:
+    # . is the current directory
+    # -t tag
+    - docker build -t fanmixco/docker-react -f Dockerfile.dev .
+
+script:
+    - docker run -e CI=true fanmixco/docker-react npm run test
