@@ -20,7 +20,7 @@ deploy:
     env: "DockerReactExample-env"
     #s3-storage
     bucket_name: "elasticbeanstalk-us-east-2-195243960488"
-    bucket_path: "docker-react"
+    bucket_path: "docker-react-example"
     on:
         branch: master
     access_key_id: $AWS_ACCESS_KEY
