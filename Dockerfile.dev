@@ -1,0 +1,16 @@
+#get linux copy
+FROM node:alpine
+
+WORKDIR '/app'
+
+#copy json file first
+COPY package.json .
+
+#install dependencies
+RUN npm install
+
+#copy all repos
+COPY . .
+
+#execute commands
+CMD ["npm", "run", "start"]

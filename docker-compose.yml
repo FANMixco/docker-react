@@ -1,0 +1,31 @@
+version: '3'
+services:
+    web:
+        stdin_open: true
+        #. for the normal dockerfile
+        build:
+            #where all files we want to come from
+            context: .
+            dockerfile: Dockerfile.dev
+        ports:
+            - "3000:3000"
+        #windows required variable
+        environment:
+            - CHOKIDAR_USEPOLLING=true
+        volumes:
+            #exclude this folder
+            - /app/node_modules
+            #reference external folder to internal in the container 
+            - .:/app
+    #second container for running tests
+    tests:
+        build:
+            #where all files we want to come from
+            context: .
+            dockerfile: Dockerfile.dev
+        volumes:
+            #exclude this folder
+            - /app/node_modules
+            #reference external folder to internal in the container 
+            - .:/app
+        command: ["npm", "run", "test"]
