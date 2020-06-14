@@ -17,7 +17,7 @@ deploy:
     region: "us-east-2"
     #app name
     app: "docker-react-example"
-    env: "DockerReactExample-env"
+    env: "dockerreactexample-env"
     #s3-storage
     bucket_name: "elasticbeanstalk-us-east-2-195243960488"
     bucket_path: "docker-react-example"
