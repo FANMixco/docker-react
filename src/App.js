@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React with Federico
+          Learn React with Federico Navarrete
         </a>
       </header>
     </div>
